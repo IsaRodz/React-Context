@@ -1,0 +1,67 @@
+$prim: #2196f3;
+
+form {
+    padding: 20px;
+    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    input,
+    button {
+        font-family: inherit;
+        font-size: 1em;
+        width: 100%;
+        border: none;
+        outline: none;
+        transition: 300ms;
+    }
+
+    input {
+        margin-bottom: 1em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: .7em 0;
+
+        &:focus {
+            border-color: $prim;
+            box-shadow: 0 1px 0 0 $prim;
+        }
+    }
+
+    button {
+        padding: .7em;
+        border-radius: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        background: $prim;
+        cursor: pointer;
+
+        &:hover {
+            background: $prim + 15%;
+            box-shadow: 0 2px 10px -2.5px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        h4 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            color: #777;
+        }
+    }
+}
