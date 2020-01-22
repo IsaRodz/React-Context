@@ -48,8 +48,7 @@ function NewProduct() {
         e.preventDefault()
 
         if (isNaN(newProduct.price) || newProduct.price <= 0) {
-            setToast(true)
-            setTimeout(() => setToast(false), 3500)
+            setToast(true, setTimeout(() => setToast(false), 3500))
         } else {
             setProducts([...products, newProduct])
             setNewProduct({
