@@ -39,7 +39,7 @@ function NewProduct() {
     `
 
     const [newProduct, setNewProduct] = useState({
-        id: products.length + 1,
+        id: products.length,
         name: '',
         price: '',
     })

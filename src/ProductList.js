@@ -13,7 +13,7 @@ function ProductList() {
             <ul>
                 {
                     products.map((product, index) =>
-                        <Product
+                        <Product click={() => console.log(products[index])}
                             key={index}
                             name={product.name}
                             price={product.price}
