@@ -16,6 +16,9 @@ function Navigation() {
         font-size: 2em;
         font-weight: 300;
         margin: 0;
+        @media (max-width: 768px) {
+            font-size: 1.5em
+        }
     `
     const Total = styled.span`
         font-size: .85em;

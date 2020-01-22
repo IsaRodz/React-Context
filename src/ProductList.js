@@ -12,9 +12,9 @@ function ProductList() {
             <h2>Products</h2>
             <ul>
                 {
-                    products.map(product =>
+                    products.map((product, index) =>
                         <Product
-                            key={product.id}
+                            key={index}
                             name={product.name}
                             price={product.price}
                         />
