@@ -16,6 +16,10 @@ function App() {
         display: grid;
         grid-template-columns: 30% calc(70% - 30px);
         grid-gap: 30px;
+        @media (max-width: 850px) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+        }
     `
 
   return (

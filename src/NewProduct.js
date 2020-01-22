@@ -1,37 +1,44 @@
 import React, { useState, useContext } from 'react'
 import { ProductContext } from './ProductContext'
 
-function NewProduct(props) {
-
-    const [name, setName] = useState('')
-    const [price, setPrice] = useState('')
-
-    const updateName = e => setName(e.target.value)
-    const updatePrice = e => setPrice(e.target.value)
+function NewProduct() {
 
     const [products, setProducts] = useContext(ProductContext)
+
+    const [newProduct, setNewProduct] = useState({
+        id: products.length + 1,
+        name: '',
+        price: '',
+    })
 
     const addProduct = e => {
         e.preventDefault()
 
-        if (isNaN(price) || price <= 0) {
+        if (isNaN(newProduct.price) || newProduct.price <= 0) {
             alert('Set a valid price for the product')
         } else {
-            setProducts([...products, {
+            setProducts([...products, newProduct])
+            setNewProduct({
                 id: products.length + 1,
-                name: name,
-                price: price
-            }])
-            setName('')
-            setPrice('')
+                name: '',
+                price: '',
+            })
         }
     }
     return (
         <div>
             <h2>New Product</h2>
             <form onSubmit={addProduct}>
-                <input type="text" onChange={updateName} placeholder="Name" value={name} />
-                <input type="text" onChange={updatePrice} placeholder="Price" value={price} />
+                <input required
+                    onChange={e => setNewProduct({ ...newProduct, name: e.target.value })}
+                    placeholder="Name"
+                    value={newProduct.name}
+                />
+                <input
+                    onChange={e => setNewProduct({ ...newProduct, price: e.target.value })}
+                    placeholder="Price"
+                    value={newProduct.price}
+                />
                 <button>Save</button>
             </form>
         </div>
