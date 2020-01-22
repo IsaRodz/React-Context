@@ -14,8 +14,8 @@ function App() {
         max-width: 95%;
         margin: auto;
         display: grid;
-        grid-template-columns: 29% 63%;
-        grid-gap: 5%;
+        grid-template-columns: 30% calc(70% - 30px);
+        grid-gap: 30px;
     `
 
   return (

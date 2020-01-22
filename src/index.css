@@ -8,13 +8,19 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Fira Mono', monospace;
 }
 
 h2 {
   font-size: 2.75em;
+  line-height: 1;
   font-weight: 300;
   color: #333;
-  margin: .3em 0;
+  margin: .5em 0;
+}
+
+@media (max-width: 970px) {
+  h2 {
+    font-size: 2em;
+  }
 }
